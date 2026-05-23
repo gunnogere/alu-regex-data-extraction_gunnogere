@@ -45,7 +45,7 @@ alu-regex-data-extraction_gunnogere/
 Download Node.js from:
 https://nodejs.org
 
-##### Steps for Ubuntu
+### Steps for Ubuntu
 # Download and install nvm:
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.4/install.sh | bash
 # in lieu of restarting the shell
