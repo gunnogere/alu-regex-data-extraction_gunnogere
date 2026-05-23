@@ -1,0 +1,31 @@
+Hello Team,
+
+Please contact support@alueducation.com for official requests.
+For alumni matters, reach out to jane.doe@alumni.alueducation.com.
+
+Our SI lead can also be reached at mike23@si.alueducation.com.
+
+Random invalid emails:
+admin@@gmail.com
+fake@alueducation
+<script>alert('hack')</script>
+
+Useful links:
+https://www.alueducation.com
+http://example.org/profile?id=22
+www.github.com/gunn
+
+Call us:
++250 788 123 456
+(202) 555-0173
++1-800-555-1234
+
+Trending hashtags:
+#FrontendDev
+#ALU
+#100DaysOfCode
+
+Potential malicious input:
+DROP TABLE users;
+4111-1111-1111-1111
+5500 0000 0000 0004

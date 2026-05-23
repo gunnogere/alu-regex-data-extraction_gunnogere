@@ -1,0 +1,39 @@
+{
+  "emails": [
+    "support@alueducation.com",
+    "jane.doe@alumni.alueducation.com",
+    "mike23@si.alueducation.com"
+  ],
+  "aluOfficialEmails": [
+    "support@alueducation.com"
+  ],
+  "aluAlumniEmails": [
+    "jane.doe@alumni.alueducation.com"
+  ],
+  "aluSIEmails": [
+    "mike23@si.alueducation.com"
+  ],
+  "urls": [
+    "https://www.alueducation.com",
+    "http://example.org/profile?id=22",
+    "www.github.com/gunn"
+  ],
+  "phones": [
+    "+250 788 123 456",
+    "(202) 555-0173",
+    "+1-800-555-1234"
+  ],
+  "hashtags": [
+    "#FrontendDev",
+    "#ALU",
+    "#100DaysOfCode"
+  ],
+  "maskedCreditCards": [
+    "4111-1111-1111-1111",
+    "5500 0000 0000 0004"
+  ],
+  "suspiciousContent": [
+    "<script>alert('hack')</script>",
+    "DROP TABLE"
+  ]
+}
