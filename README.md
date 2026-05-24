@@ -6,7 +6,7 @@ By: Joshua Mulongo
 
 ---
 
-## 🛠️ How `main.js` Works (For Facilitators)
+##  How `main.js` Works (For Facilitators)
 
 1. **Reads the Input:** The script wakes up and looks inside the `input/raw-text.txt` file to read the messy data.
 2. **Runs the Regex Filters:** It passes the text through several **Regular Expression (Regex)** patterns to detect specific data types (Emails, URLs, Phone Numbers, and Hashtags).
@@ -19,7 +19,7 @@ By: Joshua Mulongo
 
 ---
 
-## 📂 Project Architecture
+## Project Architecture
 
 ```text
 alu-regex-data-extraction_gunnogere/
@@ -35,7 +35,7 @@ alu-regex-data-extraction_gunnogere/
 
 ---
 
-## 🚀 How to Run the Project
+##  How to Run the Project
 
 ### Step 1: Ensure Node.js is Installed
 
@@ -73,7 +73,7 @@ Once executed, check the `output/` folder! A brand new `regex-check-output.json`
 
 ---
 
-## 🔍 Core Features & Regex Breakdown
+##  Core Features & Regex Breakdown
 
 The system actively scans for and processes the following features:
 
@@ -92,7 +92,7 @@ The script doesn't just find any email; it specifically validates student, staff
 * `@alumni.alueducation.com`
 * `@si.alueducation.com`
 
-<<<<<<< HEAD
+
 ### 3. Security & Data Privacy
 
 * **XSS & SQLi Detection:** Flags suspicious code syntax to keep the application safe.
@@ -102,4 +102,4 @@ The script doesn't just find any email; it specifically validates student, staff
 ```text
 output/regex-check-output.json
 ```
->>>>>>> b0b9db159bf7f4075cfdfdc8ff42cc76bbeda043
+
