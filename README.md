@@ -92,8 +92,14 @@ The script doesn't just find any email; it specifically validates student, staff
 * `@alumni.alueducation.com`
 * `@si.alueducation.com`
 
+<<<<<<< HEAD
 ### 3. Security & Data Privacy
 
 * **XSS & SQLi Detection:** Flags suspicious code syntax to keep the application safe.
 * **Credit Card Masking:** Protects user financial data by hiding core credit card digits.
 * **Bad Email Filtering:** Smart enough to skip malformed or broken email addresses.
+=======
+```text
+output/regex-check-output.json
+```
+>>>>>>> b0b9db159bf7f4075cfdfdc8ff42cc76bbeda043
