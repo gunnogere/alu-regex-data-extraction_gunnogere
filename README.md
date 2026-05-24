@@ -4,9 +4,9 @@
 
 By: Joshua Mulongo
 
----
 
-##  How `main.js` Works (For Facilitators)
+
+##  How `main.js` Works 
 
 1. **Reads the Input:** The script wakes up and looks inside the `input/raw-text.txt` file to read the messy data.
 2. **Runs the Regex Filters:** It passes the text through several **Regular Expression (Regex)** patterns to detect specific data types (Emails, URLs, Phone Numbers, and Hashtags).
@@ -17,7 +17,7 @@ By: Joshua Mulongo
 
 4. **Writes the Output:** Finally, it bundles all these discovered and cleaned data points into a well-structured JSON object and saves it directly to `output/regex-check-output.json`.
 
----
+
 
 ## Project Architecture
 
@@ -28,12 +28,13 @@ alu-regex-data-extraction_gunnogere/
 ├── src/
 │   └── main.js                    # The core logic & regex engine
 ├── output/
-│   └── regex-check-output.json    # The clean, final extracted data
+│   └── regex-check-output.json    # outpu for main.js. I separated this from the sample file  
+|   └── sample-output.json # sample output for the script
 └── README.md
 
 ```
 
----
+
 
 ##  How to Run the Project
 
@@ -42,7 +43,7 @@ alu-regex-data-extraction_gunnogere/
 You need Node.js installed on your machine to run the JavaScript file locally.
 
 * **Windows / macOS:** Download and install the LTS version from [nodejs.org](https://nodejs.org).
-* **Ubuntu / Linux:** Run the following commands in your terminal:
+* **Ubuntu / Linux:** Use the following commands in case you are using ubuntu OS:
 
 ```bash
 # Download and install nvm (Node Version Manager)
@@ -69,13 +70,13 @@ node src/main.js
 
 ```
 
-Once executed, check the `output/` folder! A brand new `regex-check-output.json` file will be generated with all the extracted insights.
+Once executed, check the `output/` folder for the  `regex-check-output.json` file for the extracted insights.
 
----
+
 
 ##  Core Features & Regex Breakdown
 
-The system actively scans for and processes the following features:
+The system  scans for and processes the following features:
 
 ### 1. Data Extraction
 
@@ -84,9 +85,9 @@ The system actively scans for and processes the following features:
 * **Phone Numbers:** Extracts both local numbers and complex international formats.
 * **Hashtags:** Grabs social media style hashtags (e.g., `#ALU`, `#Programming`).
 
-### 2. ALU Specific Filtering
+### 2. ALU email Filtering 
 
-The script doesn't just find any email; it specifically validates student, staff, and alumni accounts belonging to:
+The script finds emails ending with the connotations specified for the ALU staff, Alumni and SI:
 
 * `@alueducation.com`
 * `@alumni.alueducation.com`
