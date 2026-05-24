@@ -1,39 +1,54 @@
 {
   "emails": [
+    "admissions-team@alueducation.com",
     "support@alueducation.com",
+    "k.kamara.2022@alumni.alueducation.com",
     "jane.doe@alumni.alueducation.com",
-    "mike23@si.alueducation.com"
+    "mike23@si.alueducation.com",
+    "tech-support@si.alueducation.com"
   ],
-  "aluOfficialEmails": [
+  "alueduc_emails_from_text": [
+    "admissions-team@alueducation.com",
     "support@alueducation.com"
   ],
-  "aluAlumniEmails": [
+  "alumni_emails_from_text": [
+    "k.kamara.2022@alumni.alueducation.com",
     "jane.doe@alumni.alueducation.com"
   ],
-  "aluSIEmails": [
-    "mike23@si.alueducation.com"
+  "alu_si_emails_from_text": [
+    "mike23@si.alueducation.com",
+    "tech-support@si.alueducation.com"
   ],
   "urls": [
-    "https://www.alueducation.com",
-    "http://example.org/profile?id=22",
-    "www.github.com/gunn"
+    "https://www.alueducation.com](https://www.alueducation.com",
+    "http://example.org/profile?id=22](http://example.org/profile?id=22",
+    "www.github.com/gunn](https://www.google.com/search?q=https://www.github.com/gunn",
+    "https://portal.alueducation.com/dashboard?user=joshua&session=true#settings](https://portal.alueducation.com/dashboard?user=joshua&session=true#settings",
+    "www.learning.si.alueducation.com/course/regex-101](https://www.google.com/search?q=https://www.learning.si.alueducation.com/course/regex-101",
+    "https://malicious-site.com/steal.js\"></script"
   ],
   "phones": [
+    "0788-111-222",
     "+250 788 123 456",
     "(202) 555-0173",
     "+1-800-555-1234"
   ],
   "hashtags": [
+    "#settings",
+    "#settings",
     "#FrontendDev",
     "#ALU",
     "#100DaysOfCode"
   ],
   "maskedCreditCards": [
     "4111-1111-1111-1111",
-    "5500 0000 0000 0004"
+    "5500 0000 0000 0004",
+    "1234-5678-9012-3456",
+    "9876 5432 1098 7654"
   ],
   "suspiciousContent": [
-    "<script>alert('hack')</script>",
+    "<script src=\"https://malicious-site.com/steal.js\"></script>",
+    "DROP TABLE",
     "DROP TABLE"
   ]
 }

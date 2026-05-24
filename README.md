@@ -1,115 +1,99 @@
+
+
 # ALU Regex Data Extraction Assignment
 
-##  Overview
-
-Welcome! This project is a simple tool designed to find and "extract" specific types of information (like emails, phone numbers, and web links) from a messy block of text.
-
-It uses **Regular Expressions (Regex)**—which are like advanced search patterns—to identify data automatically.
-
-### What this tool does:
-
-**Extracts:**
-
-- Email addresses
-- URLs
-- Phone numbers
-- Hashtags
-
-**Protects and Validates:**
-
-- ALU-specific email validation
-- Basic security checks
-- Credit card masking
+By: Joshua Mulongo
 
 ---
 
-##  Project Structure
+## 🛠️ How `main.js` Works (For Facilitators)
+
+1. **Reads the Input:** The script wakes up and looks inside the `input/raw-text.txt` file to read the messy data.
+2. **Runs the Regex Filters:** It passes the text through several **Regular Expression (Regex)** patterns to detect specific data types (Emails, URLs, Phone Numbers, and Hashtags).
+3. **Applies Custom Rules:** * **ALU Verification:** It checks if discovered emails belong to official ALU domains (`@alueducation.com`, etc.).
+* **Security Scrubbing:** It scans the text for malicious attempts like script tags (`<script>`) or SQL Injection phrases to flag them.
+* **Privacy Masking:** If it spots a credit card number, it masks it (e.g., `****-****-****-1234`) so sensitive data isn't exposed.
+
+
+4. **Writes the Output:** Finally, it bundles all these discovered and cleaned data points into a well-structured JSON object and saves it directly to `output/regex-check-output.json`.
+
+---
+
+## 📂 Project Architecture
 
 ```text
 alu-regex-data-extraction_gunnogere/
 ├── input/
-│   └── raw-text.txt
+│   └── raw-text.txt               # The messy source text to scan
 ├── src/
-│   └── main.js
+│   └── main.js                    # The core logic & regex engine
 ├── output/
-│   └── regex-check-output.json
+│   └── regex-check-output.json    # The clean, final extracted data
 └── README.md
+
 ```
 
 ---
 
-## How to Run
+## 🚀 How to Run the Project
 
-### 1. Install Node.js
+### Step 1: Ensure Node.js is Installed
 
-Download Node.js from:
-https://nodejs.org
+You need Node.js installed on your machine to run the JavaScript file locally.
 
-##### Steps for Ubuntu
-# Download and install nvm:
+* **Windows / macOS:** Download and install the LTS version from [nodejs.org](https://nodejs.org).
+* **Ubuntu / Linux:** Run the following commands in your terminal:
+
+```bash
+# Download and install nvm (Node Version Manager)
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.4/install.sh | bash
-# in lieu of restarting the shell
-\. "$HOME/.nvm/nvm.sh"
-# Download and install Node.js:
-nvm install 24
-# Verify the Node.js version:
-node -v # Should print "v24.16.0".
-# Verify npm version:
-npm -v # Should print "11.13.0".
 
-### 2. Run the program
+# Activate nvm without restarting your terminal
+source ~/.bashrc
+
+# Install Node.js version 24
+nvm install 24
+
+# Verify it works (Should print version numbers)
+node -v
+npm -v
+
+```
+
+### Step 2: Run the Script
+
+Open your terminal, navigate to the project's root folder, and execute:
 
 ```bash
 node src/main.js
+
 ```
 
----
-
-## Regex Patterns Used
-
-### Emails
-
-Extracts valid email formats.
-
-### ALU Email Validation
-
-Validates:
-
-- `@alueducation.com`
-- `@alumni.alueducation.com`
-- `@si.alueducation.com`
-
-### URLs
-
-Extracts HTTP, HTTPS, and WWW links.
-
-### Phone Numbers
-
-Supports international and local formats.
-
-### Hashtags
-
-Extracts hashtags from text.
+Once executed, check the `output/` folder! A brand new `regex-check-output.json` file will be generated with all the extracted insights.
 
 ---
 
-## Security Considerations
+## 🔍 Core Features & Regex Breakdown
 
-The program demonstrates defensive handling of untrusted input:
+The system actively scans for and processes the following features:
 
-- Detects suspicious script tags
-- Detects SQL injection-like text
-- Masks credit card numbers before output
-- Ignores malformed emails
+### 1. Data Extraction
 
-Sensitive information is not fully exposed in logs or outputs.
+* **Standard Emails:** Captures normal everyday email formats.
+* **URLs & Links:** Finds web links starting with `http://`, `https://`, or `www.`.
+* **Phone Numbers:** Extracts both local numbers and complex international formats.
+* **Hashtags:** Grabs social media style hashtags (e.g., `#ALU`, `#Programming`).
 
----
+### 2. ALU Specific Filtering
 
-## Output
+The script doesn't just find any email; it specifically validates student, staff, and alumni accounts belonging to:
 
-Results are saved in:
+* `@alueducation.com`
+* `@alumni.alueducation.com`
+* `@si.alueducation.com`
 
-```text
-output/regex-check-output.json
-```
+### 3. Security & Data Privacy
+
+* **XSS & SQLi Detection:** Flags suspicious code syntax to keep the application safe.
+* **Credit Card Masking:** Protects user financial data by hiding core credit card digits.
+* **Bad Email Filtering:** Smart enough to skip malformed or broken email addresses.
