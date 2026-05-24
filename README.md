@@ -2,7 +2,7 @@
 
 # ALU Regex Data Extraction Assignment
 
-By: Joshua Mulongo
+By: Joshua Mulongo (j.mulongo@alustudent.com)
 
 
 
